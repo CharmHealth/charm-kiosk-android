@@ -1,0 +1,21 @@
+# Template for secure.properties
+# Copy this file to secure.properties and fill in the values.
+# secure.properties is gitignored and must NEVER be committed.
+
+# Sign-in (CharmAuth SDK) - per environment. None of these is a secret.
+# Auth0 tenant, with its trailing slash.
+charmAuth.issuer=https://accounts-dev.lighthouse.charmhealth.ai/
+# Auth0 Native application (shared with the iOS kiosk). Its allowed callbacks must include
+# com.charmhealth.kiosk:/oauth2/callback
+charmAuth.clientId=
+# The EHR API identifier: the access token's audience.
+charmAuth.audience=https://api.charmhealth.com/ehr
+# CHIS's branded sign-in page.
+charmAuth.signInEntryUrl=https://<chis-host>/chis/login
+# The kiosk's scopes, space separated (added to openid profile email offline_access).
+charmAuth.additionalScopes=patient.fullaccess.read patient.fullaccess.create patient.fullaccess.delete patient.fullaccess.update defaults.read user.fullaccess.read user.fullaccess.create user.fullaccess.update user.fullaccess.delete
+# Every origin the token may be sent to (scheme://host[:port], comma separated). Must include
+# the origin of ehrBaseUrl, or every API call is refused.
+charmAuth.apiOrigins=https://<ehr-host>
+# The EHR server the kiosk calls.
+charmAuth.ehrBaseUrl=https://<ehr-host>

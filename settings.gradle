@@ -1,0 +1,48 @@
+pluginManagement {
+
+    resolutionStrategy {
+        eachPlugin {
+            if (requested.id.name == "apptics-plugin") {
+                useModule("com.zoho.apptics:apptics-plugin:0.2.4")
+            }
+        }
+    }
+
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+        maven { url 'https://maven.zohodl.com/' } //apptics
+    }
+}
+plugins {
+    id 'org.gradle.toolchains.foojay-resolver-convention' version '1.0.0'
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+//        flatDir {
+//            dirs 'sso-wrapper/libs'
+//        }
+        maven {
+            url 'https://maven.zohodl.com/'//apptics
+        }
+    }
+}
+
+rootProject.name = "Charm Kiosk"
+include ':app'
+//include ':sso-wrapper'
+
+// CharmAuth SDK (github.com/CharmHealth/charm-mobile-auth-sdk), a git submodule at
+// native/charm-mobile-auth-sdk, built with the app. -PcharmAuthSdkDir=<path> builds against
+// another checkout of the SDK instead.
+def charmAuthSdkDir = providers.gradleProperty('charmAuthSdkDir').getOrElse('native/charm-mobile-auth-sdk')
+includeBuild(charmAuthSdkDir) {
+    dependencySubstitution {
+        substitute module('com.charmhealth.auth:charm-mobile-auth') using project(':charm-mobile-auth')
+    }
+}

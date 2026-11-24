@@ -1,0 +1,197 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'org.jetbrains.kotlin.plugin.compose'
+    id 'org.jetbrains.kotlin.plugin.serialization'
+    id 'com.google.devtools.ksp'
+    id 'com.google.dagger.hilt.android'
+    id 'apptics-plugin'
+}
+
+android {
+    namespace 'com.charm.ehr.kiosk'
+    compileSdk 36
+
+    defaultConfig {
+        applicationId "com.charm.ehr.kiosk"
+        minSdk 24
+        targetSdk 36
+        versionCode 12
+        versionName "0.0.2"
+
+
+        ndk.abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
+
+        // Sign-in (CharmAuth SDK). Per-environment values from secure.properties: see
+        // secure.properties.example. None of them is a secret.
+        def props = rootProject.ext.secrets
+        def charmAuth = { key -> "\"${props["charmAuth.$key"] ?: ""}\"" }
+        buildConfigField "String", "AUTH_ISSUER", charmAuth('issuer')
+        buildConfigField "String", "AUTH_CLIENT_ID", charmAuth('clientId')
+        buildConfigField "String", "AUTH_AUDIENCE", charmAuth('audience')
+        buildConfigField "String", "AUTH_SIGN_IN_ENTRY_URL", charmAuth('signInEntryUrl')
+        buildConfigField "String", "AUTH_ADDITIONAL_SCOPES", charmAuth('additionalScopes')
+        buildConfigField "String", "AUTH_API_ORIGINS", charmAuth('apiOrigins')
+        buildConfigField "String", "EHR_BASE_URL", charmAuth('ehrBaseUrl')
+        // The OAuth redirect is charm.kiosk:/oauth2/callback (registered in Auth0); the
+        // SDK's CharmRedirectActivity receives it.
+        manifestPlaceholders["charmAuthRedirectScheme"] = "charm.kiosk"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+
+    buildTypes {
+        release {
+            debuggable false
+            minifyEnabled true
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            debuggable true
+            minifyEnabled false
+            shrinkResources false
+            versionNameSuffix "-DEBUG"
+            ndk {
+                abiFilters "arm64-v8a", "x86_64"
+            }
+        }
+
+
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    buildFeatures {
+        compose true
+        viewBinding true
+        buildConfig true
+    }
+
+    packaging {
+        resources {
+            it.excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+
+}
+
+kotlin {
+    compilerOptions {
+        jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17
+    }
+}
+
+composeCompiler {
+    includeSourceInformation = true
+}
+
+dependencies {
+
+    // AndroidX libraries
+    implementation 'androidx.core:core-ktx:1.13.1'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.8.3'
+    implementation 'androidx.activity:activity-compose:1.9.0'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation "androidx.preference:preference-ktx:1.2.1"
+    implementation "androidx.datastore:datastore-preferences:1.1.7"
+    implementation 'androidx.biometric:biometric:1.2.0-alpha05'
+
+    // Jetpack compose
+    implementation platform('androidx.compose:compose-bom:2025.10.01')
+    implementation 'androidx.compose.ui:ui'
+    implementation 'androidx.compose.ui:ui-android'
+    implementation 'androidx.compose.ui:ui-graphics'
+    implementation 'androidx.compose.ui:ui-tooling-preview'
+    implementation 'androidx.compose.foundation:foundation'
+    implementation 'androidx.compose.material3:material3'
+    implementation 'androidx.compose.material3:material3-window-size-class:1.2.1'
+
+    //Navigation
+    def navigation_version = "2.9.0"
+    implementation "androidx.navigation:navigation-runtime-ktx:$navigation_version"
+    implementation "androidx.navigation:navigation-compose:$navigation_version"
+    implementation "androidx.navigation:navigation-fragment-ktx:$navigation_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$navigation_version"
+
+    // Dependency Injection - HILT
+    def hilt_version = '2.57.2'
+
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    ksp "com.google.dagger:hilt-compiler:$hilt_version"
+    implementation "androidx.hilt:hilt-navigation-compose:1.2.0"
+
+    // Dependency Injection - HILT Worker Factory
+    def hilt_work_version = '1.3.0'
+    implementation "androidx.hilt:hilt-work:$hilt_work_version"
+    ksp "androidx.hilt:hilt-compiler:$hilt_work_version"
+
+    //Worker
+    implementation 'androidx.work:work-runtime-ktx:2.11.0'
+
+    // Kotlin Serialization
+    implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.1"
+
+    // Testing
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
+
+    //Compose debugging tools
+    debugImplementation 'androidx.compose.ui:ui-tooling'
+    debugImplementation 'androidx.compose.ui:ui-test-manifest'
+
+    // Networking
+    def retrofit_version = "2.11.0"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "com.squareup.okhttp3:logging-interceptor:4.9.3"
+    implementation "com.google.code.gson:gson:2.11.0"
+
+    // Image Loading
+    implementation "io.coil-kt:coil-compose:2.6.0"
+    implementation "io.coil-kt:coil-svg:2.6.0"
+
+    // Sign-in: CharmAuth SDK, built from the native/charm-mobile-auth-sdk submodule (settings.gradle)
+    implementation 'com.charmhealth.auth:charm-mobile-auth:0.1.0'
+
+    // Zoho Apptics SDKs
+    implementation platform('com.zoho.apptics:apptics-bom:0.3.6.2') {
+        exclude group: 'android.arch.work', module: 'work-runtime'
+    }
+    implementation 'com.zoho.apptics:apptics-logger'
+    implementation 'com.zoho.apptics:apptics-analytics'
+    implementation 'com.zoho.apptics:apptics-crash-tracker'
+    implementation 'com.zoho.apptics:apptics-appupdates'
+    implementation 'com.zoho.apptics:apptics-ratings'
+
+    /*<----Third party libraries--START-->*/
+    //Lottie Animations
+    implementation "com.airbnb.android:lottie-compose:6.4.0"
+
+    //Viewpager Dots Indicator
+    implementation 'com.tbuonomo:dotsindicator:5.1.0'
+
+    //Signature Pad
+    implementation "se.warting.signature:signature-pad:0.1.2"
+
+    //Joda Time
+    implementation 'net.danlew:android.joda:2.12.7'
+
+    //Image Compressor
+    implementation 'id.zelory:compressor:3.0.1'
+    /*<----Third party libraries--END---->*/
+
+//    // Database (Commented out)
+//    implementation "androidx.room:room-runtime:2.6.1"
+//    ksp "androidx.room:room-compiler:2.6.1"
+//    implementation "net.zetetic:android-database-sqlcipher:4.5.4"
+
+
+}

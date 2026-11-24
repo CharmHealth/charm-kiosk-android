@@ -1,0 +1,4 @@
+[submodule "native/charm-mobile-auth-sdk"]
+	path = native/charm-mobile-auth-sdk
+	url = https://github.com/CharmHealth/charm-mobile-auth-sdk.git
+	branch = CH-2208-mobile-auth-sdk-hardening

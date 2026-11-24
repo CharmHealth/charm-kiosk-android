@@ -1,0 +1,472 @@
+<resources>
+
+    <string name="app_name">Charm Kiosk</string>
+
+    <!--Do not remove-->
+    <string name="redir_url">charmkiosk://</string>
+    <string name="iam_portal_url">https://accounts.charmtracker.com</string>
+    <string name="accounts_url" translatable="false">https://accounts.charmtracker.com</string>
+    <string name="profile_url" translatable="false">https://accounts.charmtracker.com/home#profile/personal</string>
+    <!--Do not remove/-->
+
+    <string name="charm_privacy_policy_url">https://www.charmhealth.com/privacy-policy.html</string>
+    <string name="charm_patient_check_in_url">https://www.charmhealth.com/resources/patient-check-in/kiosk.html</string>
+    <string name="charm_terms_of_service_url">https://www.charmhealth.com/patient-engagement/termsofservice.html</string>
+    <string name="setup_charm_kiosk_account_url">https://www.charmhealth.com/resources/patient-check-in/kiosk.html#how-to-set-up-a-kiosk-account</string>
+
+    <string name="support_email_address">support@charmhealth.com</string>
+
+    <string name="sign_in">Sign In</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="search_patient">Search Patient</string>
+    <string name="screen_lock_is_on">Screen Lock On</string>
+    <string name="self_check_in">Self Check-in</string>
+    <string name="enter_your_code">Enter your OTP</string>
+    <string name="enter_password_to_unlock">Enter Password to Unlock</string>
+    <string name="unlock_charm_kiosk">Unlock to access Charm Kiosk</string>
+    <string name="confirm_screen_lock">Confirm your Screen lock PIN, Pattern, or Password.</string>
+    <string name="identity_verification">Verify your Identity</string>
+    <string name="use_phone_lock">Use Device Lock </string>
+    <string name="use_account_password">Use Account Password</string>
+    <string name="unlock_using_phone_lock">Unlock the App with your device’s Screen lock (Fingerprint, Face unlock, PIN, or Pattern).</string>
+    <string name="unlock_using_account_password">Unlock the app with Charm Kiosk Account Password.</string>
+
+    <string name="name_or_mobile">Name / Mobile number</string>
+    <string name="email">Email</string>
+    <string name="recordId">Record ID</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="dob">DOB</string>
+    <string name="gender">Gender</string>
+    <string name="blood_group">Blood Group</string>
+    <string name="phone">Phone</string>
+    <string name="language">Language</string>
+    <string name="questionnaire">Questionnaire</string>
+    <string name="questionnaires">Questionnaires</string>
+    <string name="consent_form">Consent Form</string>
+    <string name="consent_forms">Consent Forms</string>
+    <string name="add_questionnaires">Add Questionnaires</string>
+    <string name="patient_profile">Patient Profile</string>
+    <string name="search_consent_form">Search Consent Form</string>
+    <string name="search">Search</string>
+    <string name="facility">Facility</string>
+    <string name="about_us">About Us</string>
+    <string name="terms_of_service">Terms of Service</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="no_browser_found">No browser available in your device</string>
+
+    <!--exceptions-->
+    <string name="ioException">Network Error</string>
+    <string name="socketTimeoutException">Timeout Error</string>
+    <string name="conversionError">Conversion Error</string>
+    <string name="pleaseEnterPassword">Please enter Password</string>
+    <!--/exceptions-->
+
+
+    <!--Login -->
+    <string name="LoginFailed">Login Failed</string>
+
+
+    <!--combine Text change with caution-->
+
+
+    <!--/combine Text change with caution-->
+
+
+    <!--/Login -->
+
+
+    <!--common Strings for dialog-->
+    <string name="alertDialogTextYes">Yes</string>
+    <string name="alertDialogTextNo">No</string>
+
+    <string name="alertDialogNoTextNoI18N">No</string>
+    <string name="alertDialogYesTextNoI18N">Yes</string>
+    <string name="alertDialogOkTextNoI18N">Ok</string>
+
+
+    <!--/common Strings for dialog-->
+
+
+    <!-- ****************** UI Strings ******************** -->
+
+    <!-- Add Patient-->
+    <string name="add_patient">Add Patient</string>
+    <string name="dobStr">Date of Birth</string>
+    <string name="nextStr">Next</string>
+    <string name="stateStr">State</string>
+    <string name="cityStr">City</string>
+    <string name="address_line_1">Address Line 1</string>
+    <string name="address_line_2">Address Line 2</string>
+
+
+    <!-- ****************** UI Strings ******************** -->
+
+
+    <!-- Validation Strings -->
+    <string name="pleaseEnterFirstName">Please enter First Name</string>
+    <string name="pleaseEnterLastName">Please enter Last Name</string>
+    <string name="one_alphabet_name">Please enter at least one letter in the name.</string>
+    <string name="pleaseEnterDob">Please enter Date of Birth</string>
+    <string name="pleaseEnterBirthSex">Please enter Birth Sex</string>
+    <string name="dob_invalid">Invalid Date</string>
+    <string name="unsaved_changes">Unsaved Changes</string>
+
+    <!-- Internet Connection Error strings -->
+    <string name="add_patient_img_offline_msg">@string/noInternetConnection</string>
+    <string name="add_patient_offline_msg">@string/noInternetConnection</string>
+    <string name="edit_patient_offline_msg">@string/noInternetConnection</string>
+    <string name="fetch_patient_offline_msg">@string/noInternetConnection</string>
+    <string name="fetchAppointmentOfflineMsg">@string/noInternetConnection</string>
+
+    <!-- info strings -->
+
+
+    <!--/Add Patient-->
+
+
+    <!--OTP Fragment-->
+
+    <!-- Internet Connection Error strings -->
+
+    <string name="noInternetConnection">No Internet Connection</string>
+    <string name="offline_msg">@string/noInternetConnection</string>
+    <string name="members_fetch_offline_msg">No Internet Connection. Please try after some time.</string>
+    <string name="change_status_offline_msg">@string/noInternetConnection</string>
+    <string name="member_work_timings_offline_msg">@string/noInternetConnection</string>
+
+    <!-- info strings -->
+    <string name="api_not_success_error">Error Occurred</string>
+    <string name="loading">Loading</string>
+
+
+    <!-- ****************** UI Strings ******************** -->
+    <string name="country">Country</string>
+    <string name="edit_patient">Edit Profile</string>
+    <!-- ****************** UI Strings ******************** -->
+
+
+    <!-- ****************** UI Strings ******************** -->
+    <string name="otherSpeciality">Others</string>
+    <string name="check_in">Check-In</string>
+    <string name="appointment">Appointments</string>
+    <string name="verify">Verify</string>
+    <string name="date">Date</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="finishStr">Finish</string>
+    <string name="fetch_appointment_offine_failure">@string/noInternetConnection</string>
+    <string name="errorOccurred">Error occurred. Please try again</string>
+    <string name="cameraStr">Camera</string>
+    <string name="check_in_appointment_status">Appointment Check-in Status</string>
+    <string name="edit_str">Edit</string>
+    <string name="add">Add</string>
+    <string name="exitStr">Exit</string>
+    <string name="settings">Settings</string>
+    <string name="doneStr">Done</string>
+    <string name="areYouSureWantToLogout">Are you sure you want to sign out?</string>
+    <string name="category">Category</string>
+    <string name="select_language_heading">Select Language</string>
+    <string name="select_country_heading">Select Country</string>
+    <string name="select_state_heading">Select State</string>
+
+    <string name="emptyFacilityList">No Facilities Found</string>
+    <string name="refresh">Refresh</string>
+
+
+
+    <string name="incorrect_password">Incorrect Password. Please try again.</string>
+    <!-- /info desk-->
+
+    <!--Payment-->
+
+    <string name="errorPaymentOfflineMsg">@string/noInternetConnection</string>
+    <string name="retry">Retry</string>
+    <string name="cancel">Cancel</string>
+
+
+    <string name="search_patients_by">Search Patients by %1$s</string>
+    <string name="no_patients_found_for">No Patients found for  \"%1$s\"</string>
+    <string name="please_verify_your_date_of_birth">Please verify your date of birth</string>
+    <string name="to_proceed_further">to proceed further</string>
+    <string name="mm_dd_yyyy">MM/DD/YYYY</string>
+    <string name="dd_mm_yyyy">DD/MM/YYYY</string>
+
+    <!--/Payment-->
+
+    <string name="image_type_not_supported">Image Type not Supported</string>
+    <string name="comment_str">Comments</string>
+    <string name="powered_by">Powered by</string>
+    <string name="tap_anywhere_finish">Tap anywhere to finish</string>
+    <string name="fill_mandatory_filed">Fill Mandatory Fields</string>
+    <string name="address">Address</string>
+    <string name="primary_phone">Primary Phone</string>
+    <string name="preferred_communication">Preferred Communication</string>
+    <string name="mobile_phone">Mobile Phone</string>
+    <string name="home_phone">Home Phone</string>
+    <string name="work_phone">Work Phone</string>
+    <string name="contact_details">Contact Details</string>
+    <string name="relationship">Relationship</string>
+    <string name="name">Name</string>
+    <string name="birth_sex">Birth Sex</string>
+    <string name="caregiver">Caregiver</string>
+    <string name="emergency_contact">Emergency Contact</string>
+    <string name="primary_insurance">Primary Insurance</string>
+    <string name="secondary_insurance">Secondary Insurance</string>
+    <string name="gender_identity">Gender Identity</string>
+    <string name="race">Race</string>
+    <string name="ethnicity">Ethnicity</string>
+    <string name="marital_status">Marital Status</string>
+    <string name="employment_status">Employment Status</string>
+    <string name="smoking_status">Smoking Status</string>
+    <string name="demographics">Demographics</string>
+    <string name="no_internet_connection">You are offline. Please check your internet connection and try again.</string>
+    <string name="network_error">Network error occurred. Please try again.</string>
+    <string name="request_timeout">Connection timed out. Please try again.</string>
+    <string name="request_failed_try_again">Request failed. Please try again.</string>
+    <string name="something_went_wrong">Something went wrong. Please try again later.</string>
+    <string name="error_occurred_while_uploading_attachment">Error occurred while uploading attachments. Please try again.</string>
+    <string name="the_file_does_not_exist_or_is_not_accessible">The file does not exist or is not accessible.</string>
+    <string name="save">Save</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="skip">Skip</string>
+
+    <string name="select_race">Select Race</string>
+    <string name="select_ethnicity">Select Ethnicity</string>
+
+    <string name="profile">Profile</string>
+    <string name="personal_information">Personal Information</string>
+    <string name="contact_information">Contact Information</string>
+    <string name="insurance">Insurance</string>
+
+    <string name="additional_information">Additional Information</string>
+    <string name="address_detail">Address Detail</string>
+    <string name="copy_patient_address">Copy Patient Address</string>
+    <string name="basic_information">Basic Information</string>
+    <string name="insurance_card">Insurance Card</string>
+    <string name="insured_person_details">Insured Person Details</string>
+    <string name="extn">Extn</string>
+    <string name="contact_name">Contact Name</string>
+    <string name="contact_number">Contact Number</string>
+    <string name="plan_or_program_name">Plan or Program Name</string>
+    <string name="insurance_id">ID</string>
+    <string name="policy_group_or_feca">Policy Group or FECA#</string>
+    <string name="payer_name">Payer Name</string>
+    <string name="copay">Copay</string>
+    <string name="deductible">Deductible</string>
+    <string name="coinsurance">Coinsurance</string>
+    <string name="valid_from">Valid From</string>
+    <string name="valid_until">Valid Until</string>
+    <string name="employer_or_school_name">Employer / School Name</string>
+    <string name="postal_code">Postal Code</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="unlock">Unlock</string>
+
+
+    <string name="insurance_type">Insurance Type</string>
+    <string name="select_payer">Select Payer</string>
+    <string name="pending">Pending</string>
+    <string name="completed">Completed</string>
+    <string name="fill">Fill</string>
+    <string name="view">View</string>
+    <string name="result">Result</string>
+    <string name="no_results_found">No Results Found</string>
+    <string name="mandatory_field_msg">This field is required</string>
+    <string name="search_min_length">Enter at least %1$s characters to search</string>
+    <string name="valid_from_date_error">From date cannot be greater than to date</string>
+    <string name="invalid_email_error">Invalid Email Address</string>
+    <string name="patient_with_same_detail_content">A matching record was found. Review it before creating a new one.</string>
+    <string name="patient_record_already_exist">Patient record already exists</string>
+    <string name="i_understand_and_want_to_create_a_duplicate_patient_record">I understand and want to create duplicate record</string>
+    <string name="add_caregiver">Add Caregiver</string>
+    <string name="primary_caregiver">Primary Caregiver</string>
+    <string name="secondary_caregiver">Secondary Caregiver</string>
+    <string name="same_patient_contact">Same as Patient Contact</string>
+    <string name="discard_changes_msg">Do you want to discard the changes?</string>
+    <string name="save_changes_msg">Do you want to save the changes?</string>
+    <string name="discard">Discard</string>
+    <string name="patient_info_save_msg">Patient details updated successfully</string>
+    <string name="primary_insurance_added">Primary Insurance added successfully</string>
+    <string name="primary_insurance_updated">Primary Insurance updated successfully</string>
+    <string name="secondary_insurance_added">Secondary Insurance added successfully</string>
+    <string name="secondary_insurance_updated">Secondary Insurance updated successfully</string>
+    <string name="save_insurance_detail">Do you want to save the Insurance details before closing the tab?</string>
+    <string name="delete_caregiver_confirm">Do you want to delete Caregiver details?</string>
+    <string name="front_side">Front Side</string>
+    <string name="back_side">Back Side</string>
+    <string name="retake">Retake</string>
+    <string name="delete">Delete</string>
+    <string name="allow">Allow</string>
+    <string name="attachment">Attachment</string>
+    <string name="attachments">Attachments</string>
+
+    <string name="charm_health_kiosk">CharmHealth Kiosk</string>
+    <string name="charm_health_kiosk_content">A User-friendly Kiosk Application that Revolutionizes the Enrollment Process with Efficient Self-check-in and Data Collection, Streamlining your Workflow like never before.</string>
+
+    <string name="patient_registration">Patient Registration</string>
+    <string name="patient_registration_content">Accelerate Patient Registration Effortlessly. Collect Essential Personal and Demographic Data Swiftly, Empower Practice Members to Simplify the Process, and Enhance Efficiency.</string>
+
+    <string name="front_desk_workflow">Front Desk Workflow</string>
+    <string name="front_desk_workflow_content">Optimize Front Desk Operations Seamlessly. Enhance Workflow Efficiency and Deliver Exceptional Patient Service from the Start.</string>
+
+    <string name="patient_insurance">Patient Insurance</string>
+    <string name="patient_insurance_content">Ensure Efficient and Accurate Insurance Handling with our Intuitive App. Simplify Data Collection, Verification, Claims, and Billing Processes.</string>
+
+    <string name="questionnaire_consent_feedback_forms">Questionnaire, Consent &amp; Feedback Forms</string>
+    <string name="questionnaire_consent_feedback_forms_content">Revolutionizing Healthcare Communication and Patient Engagement. Collect Comprehensive Questionnaires, and other Forms Swiftly, Enabling Personalized Care and Informed Decision-making.</string>
+
+    <string name="video_consultation">Video Consultation</string>
+    <string name="video_consultation_content">Break Barriers with our Innovative Telehealth Feature. Experience Secure Connections, Virtual Consultations, and Seamless Pre-appointment Questionnaires</string>
+
+
+
+
+
+
+
+
+    <string name="max_file_limit_reached">Attachment limit reached (max 5).</string>
+    <string name="support_request_sent_successfully">Thank you! Your support request has been received. We\'ll get back to you shortly.</string>
+    <string name="insurance_card_delete_success">Insurance Card deleted successfully</string>
+    <string name="insurance_card_front_page_delete_msg">Do you want to delete insurance card front page?</string>
+    <string name="insurance_card_back_page_delete_msg">Do you want to delete insurance card back page?</string>
+    <string name="support_category_required">Please select a Support Category</string>
+    <string name="support_subject_empty_error">Subject cannot be empty. Please enter a subject</string>
+    <string name="support_message_empty_error">Message cannot be empty. Please enter your message</string>
+    <string name="subject_heading_max_length_reached">Subject can\’t be more than %1$s characters.</string>
+    <string name="firstname_heading_max_length_reached">First name can\’t be more than %1$s characters.</string>
+    <string name="lastname_heading_max_length_reached">Last name can\’t be more than %1$s characters.</string>
+    <string name="message_max_length_reached">Message can\’t be more than %1$s characters.</string>
+    <string name="allow_access">Allow %1$s access</string>
+    <string name="turn_on_permission">Turn On %1$s permission</string>
+    <string name="guide_for_permission_str">Open Settings, then tap Permissions and turn on&#160; %1$s</string>
+    <string name="allow_patient_profile">Allow access to capture and upload the profile picture</string>
+    <string name="subject">Subject</string>
+    <string name="message">Message</string>
+    <string name="app_version">App Version:</string>
+    <string name="android_sdk_version">Android SDK version:</string>
+    <string name="contact_support">Contact support</string>
+    <string name="default_patient_gender">Default patient gender</string>
+    <string name="default_gender">Default Gender</string>
+    <string name="refresh_data">Refresh Data</string>
+    <string name="refresh_configurations">Refresh Configurations</string>
+    <string name="more_settings">More Settings</string>
+    <string name="guided_access">Guided Access</string>
+    <string name="data_update">Data Update</string>
+    <string name="last_updated">Last Updated</string>
+    <string name="updated">Updated</string>
+    <string name="hand_over">Hand Over</string>
+    <string name="data_update_success_msg">Data refreshed successfully</string>
+    <string name="press_back_again_to_exit">Press Back again to Exit</string>
+    <string name="sign_in_with_kiosk_account">Sign In using Kiosk account</string>
+    <string name="create_kiosk_account">Create Account</string>
+    <string name="finish_exit">Finish and Exit</string>
+    <string name="ready_to_finish">Ready to Finish?</string>
+    <string name="finish_exit_msg">Once complete, your care team will take it from here.</string>
+    <string name="non_kiosk_account_user_msg">You do not have sufficient privileges to access this application.</string>
+    <string name="kiosk_login_msg">Use your Charm Kiosk account created in the EHR. If you do not have a Kiosk account, learn more.</string>
+    <string name="data_update_failed_msg">Refresh Data Failed. Please try again.</string>
+    <string name="appointment_status_configure_msg">Configure in CharmEHR</string>
+    <string name="appointment_status_configure_step_msg">Appointment check-in status configured in CharmEHR Web portal.</string>
+    <string name="default_gender_selection_msg">Choose the default gender option for New Patient Registration</string>
+    <string name="security">Security</string>
+    <string name="app_lock">App Lock</string>
+    <string name="select_facility">Select Facility</string>
+    <string name="questionnaire_completed_msg">You have completed the shared questionnaire</string>
+    <string name="exit_non_submit_questionnaire_msg">Are you sure you want to exit without submitting the Questionnaire?</string>
+    <string name="exit_flow_msg">Do you want to exit the flow?</string>
+    <string name="exit_user">Exit User</string>
+    <string name="enter_valid_date">Enter Valid Date</string>
+    <string name="max_date_check_msg">Date should not be after %1$s</string>
+    <string name="min_date_check_msg">Date should not be before %1$s</string>
+    <string name="learn_more">Learn more</string>
+    <string name="enter_date_search">Enter Date of Birth to search</string>
+    <string name="enter_valid_date_search">Enter a valid Date of Birth to search</string>
+    <string name="finish_click_educate_msg">Click the Finish button to exit</string>
+    <string name="search_string">Search %1$s</string>
+    <string name="you_are_online">You are Online</string>
+    <string name="app_lock_required">App Lock Required</string>
+    <string name="select_unlock_method">Select Unlock Method</string>
+    <string name="charm_kiosk_locked">Charm Kiosk Locked</string>
+    <string name="select_preferred_unlock_method">Select your preferred unlock method</string>
+    <string name="you_are_offline">You are Offline. No internet connection</string>
+    <string name="preference_str">Preference</string>
+    <string name="app_lock_desc">Manage app unlock method</string>
+    <string name="help">Help</string>
+    <string name="info">Info</string>
+    <string name="demographics_contact_details_filled_msg">Demographics and Contact Details are already filled. Please proceed.</string>
+    <string name="touch_to_start">Touch to Start</string>
+    <string name="self_check_in_here">Self Check-In Here</string>
+    <string name="welcome_to">Welcome To</string>
+    <string name="setting_up_kiosk">Setting Up Kiosk</string>
+    <string name="no_patient_contact_front_desk">Please contact the front desk to update the phone number (existing patients) or register (new patients).</string>
+    <string name="no_patients_found">No patients found</string>
+    <plurals name="incorrect_otp_with_remaining_attempt">
+        <item quantity="one">Incorrect OTP. %1$d attempt remaining.</item>
+        <item quantity="other">Incorrect OTP. %1$d attempts remaining.</item>
+    </plurals>
+    <string name="max_attempt_reached_resend_otp">Too many incorrect attempts. Do you want to resend the OTP?</string>
+    <string name="select_patient">Select Patient</string>
+    <string name="select_patient_to_continue">Select a Patient Account to Proceed</string>
+    <string name="session_inactive">Session Inactive</string>
+    <string name="session_inactive_msg">Please unlock to continue.\n Locking in</string>
+    <string name="seconds">seconds</string>
+    <string name="attach">Attach</string>
+    <string name="send">Send</string>
+
+    <string name="otp_sent_to_mobile">A 7-digit code has been sent to the mobile number</string>
+    <string name="resend_otp">Resend OTP</string>
+    <string name="resend_otp_in_time">Resend OTP in %1$s</string>
+    <string name="verify_otp">Verify OTP</string>
+
+    <string name="enter_mobile_number_instruction">Please enter your mobile number registered with your Charm account.</string>
+    <string name="select_country_code">Select Country Code</string>
+    <string name="send_otp">Send OTP</string>
+
+    <!-- Verify DOB Screen -->
+    <string name="welcome_patient">Welcome, %1$s!</string>
+    <string name="verify_your_date_of_birth">Please verify your Date of Birth</string>
+    <string name="verify_dob">Verify Date of Birth</string>
+    <string name="please_enter_valid_dob_format">Please enter a valid Date of Birth in %1$s format</string>
+
+    <!-- Error messages - DOB verification -->
+    <plurals name="incorrect_dob_attempts_remaining">
+        <item quantity="one">Incorrect Date of Birth. %1$d attempt remaining</item>
+        <item quantity="other">Incorrect Date of Birth. %1$d attempts remaining</item>
+    </plurals>
+
+    <!-- Duplicate Patient Dialog -->
+    <string name="add_duplicate_patient">Add Duplicate</string>
+    <string name="active">Active</string>
+    <string name="patient_id_label">ID</string>
+
+    <!-- Search Template Screen -->
+    <string name="select_questionnaire">Select Questionnaire</string>
+
+    <string name="server_upload_failed_msg">Server Upload Failed</string>
+    <string name="no_questions_available">No questions available to fill</string>
+    <string name="non_supported_questionnaire_msg">Medication, Supplements and Allergies are not currently supported</string>
+    <string name="change_str">Change</string>
+    <string name="no_such_questionnaire">No such Questionnaire</string>
+    <string name="enter_search_keys_to_perform_search">Enter search keys to perform search</string>
+    <string name="max_resend_otp_attempts">You have exceeded the maximum number of attempts to send OTP. Please contact the front desk for further information.</string>
+    <string name="max_limit_reached">Max Limit Reached</string>
+    <string name="account_type_changed">Account Type Changed</string>
+    <string name="account_type_changed_error_msg">Your provider has changed the account type.\nPlease log in again to use this app.</string>
+    <string name="complete_your_profile">Complete Your Profile</string>
+    <string name="select_a_patient_account">Select a Patient Account</string>
+
+    <!-- Sign-in (CharmAuth) - same wording as the iOS kiosk -->
+    <string name="login_failed_title">Sign in failed</string>
+    <string name="login_failed_message">Please try again.</string>
+    <string name="login_refused_title">Can\'t sign in with this account</string>
+    <string name="login_refused_message">This account can\'t sign in to the kiosk. It may be inactive or not have access. Contact your practice administrator.</string>
+    <string name="login_refused_other_user">Sign in as another user</string>
+    <string name="login_unreachable_title">Can\'t reach the server</string>
+    <string name="login_unreachable_message">Check the internet connection and try again.</string>
+    <string name="login_expired_title">Sign in timed out</string>
+    <string name="login_expired_message">The sign in took too long. Please start again.</string>
+    <string name="session_expired_title">Session expired</string>
+    <string name="session_expired_message">Please sign in again.</string>
+</resources>

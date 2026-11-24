@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:statusBarColor">#F7F9FA</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="mdAppticsUpdateTheme" parent="Theme.MaterialComponents.Dialog.Alert">
+        <item name="colorAccent">@color/brandPink</item>
+        <item name="colorControlHighlight">@color/brandPink</item>
+        <item name="reviewConsentBrandingTint">@color/brandPink</item>
+        <item name="reviewConsentButtonColor">@color/brandPink</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="appticsUpdateActionButtonColor">@color/brandPink</item>
+        <item name="appticsUpdateActionButtonTextColor">@color/white</item>
+        <item name="appticsRemindAndIgnoreActionButtonColor">@color/brandPink</item>
+        <item name="appticsTextColor">@color/black</item>
+        <item name="appticsAlertIconColor">@color/brandPink</item>
+        <item name="appticsSecondaryTextColor">@color/brandPink</item>
+    </style>
+
+</resources>

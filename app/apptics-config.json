@@ -1,0 +1,6 @@
+{
+  "zak": "3B3FF920D6CA9813BB1BABEB26E8A26A3E6DCEFAECED894A8A3DE510699C0F28",
+  "bundleid": "com.charm.ehr.kiosk",
+  "serviceurl": "https://sdk-apptics.zoho.com",
+  "syncinterval": 60
+}
