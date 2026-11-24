@@ -122,12 +122,8 @@ class AuthenticationUtil @Inject constructor(
                     redirectUri = "charm.kiosk:/oauth2/callback",
                     audience = BuildConfig.AUTH_AUDIENCE.ifEmpty { null },
                     additionalScopes = list(BuildConfig.AUTH_ADDITIONAL_SCOPES, ' '),
-                    signInEntryUrl = BuildConfig.AUTH_SIGN_IN_ENTRY_URL.ifEmpty { null },
-                    apiOrigins = apiOrigins,
-                    // Auth0 native app: bearer tokens, no PAR.
-                    dpop = false,
-                    requirePar = false,
-                ),
+                    apiOrigins = apiOrigins
+                    ),
                 CharmAuthAndroid.platform(appContext),
                 // The SDK never logs tokens, codes or keys.
                 logger = { level, message -> Log.i(TAG, "[$level] $message") },
